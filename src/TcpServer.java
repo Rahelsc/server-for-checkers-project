@@ -90,7 +90,7 @@ public class TcpServer {
                             serverClientConnection.getInputStream().close();
                             // closing the input stream of a socket closes the output stream also
                             // source: {https://stackoverflow.com/questions/15239398/java-net-socketexception-socket-is-closed}
-                            // if we uncomment this line a socket exception is always thrown
+                            // if we uncomment this line a socket exception is always thrown since the stream is already closed
 //                            serverClientConnection.getOutputStream().close();
                             serverClientConnection.close();
                         } catch (IOException ioException) {
